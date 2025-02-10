@@ -1,0 +1,11 @@
+1. Bagaimana memori untuk list dialokasikan dan dikelola dalam metode createList?
+
+Dalam metode createList, setiap node dialokasikan di Heap, sementara variabel head yang menyimpan referensi ke node pertama berada di Stack. Saat node baru ditambahkan, referensi next dari node sebelumnya diperbarui agar menunjuk ke node yang baru dibuat. Selama masih ada referensi yang menunjuk ke list, memori akan tetap digunakan.
+
+2. Apa yang akan terjadi pada memori yang dialokasikan untuk list setelah metode createList selesai dieksekusi?
+
+Jika variabel head masih dapat diakses setelah metode selesai, list tetap ada di memori. Namun, jika tidak ada lagi variabel yang merujuk ke list, Garbage Collector (GC) akan otomatis membersihkan memori yang digunakan oleh node-node tersebut agar tidak terjadi pemborosan memori.
+
+3. Apakah ada potensi kebocoran memori dalam kode PairSum.java?
+
+Tidak ada kebocoran memori karena Java memiliki Garbage Collector yang akan membersihkan objek yang tidak lagi digunakan. Namun, jika jumlah data yang disimpan dalam freqMap sangat besar dan tidak dikelola dengan baik, bisa terjadi penggunaan memori berlebih (overuse memory). Untuk menghindari masalah ini, bisa menggunakan WeakHashMap agar objek yang tidak lagi direferensikan dapat lebih cepat dibersihkan dari memori.
