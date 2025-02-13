@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# 🚗 Parking POS - Frontend (React TypeScript)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Frontend aplikasi **Parking POS** dibangun dengan **React TypeScript** dan **Tailwind CSS**.  
+Aplikasi ini memungkinkan pengguna untuk **check-in kendaraan, check-out, dan melihat status parkir**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Fitur
 
-### `yarn start`
+✅ **Check-in Kendaraan**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Input manual nomor kendaraan
+- Deteksi plat nomor dengan kamera
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✅ **Check-out Kendaraan**
 
-### `yarn test`
+- Input manual atau deteksi plat nomor dengan kamera
+- Hitung total biaya parkir
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✅ **Parking Status**
 
-### `yarn build`
+- Menampilkan daftar kendaraan yang masih parkir
+- Informasi nomor plat & waktu check-in
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+✅ **Tampilan Modern dengan Sidebar Navigasi**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Akses mudah ke semua halaman aplikasi
+- Sidebar yang bisa diperbesar/diperkecil
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## 🛠️ Instalasi & Menjalankan Frontend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **1️⃣ Clone Repository**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/username/parking-pos.git
+cd parking-pos/frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **2️⃣ Install Dependencies**
 
-## Learn More
+```bash
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **3️⃣ Jalankan Frontend**
 
-### Code Splitting
+```bash
+npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+## 🔌 API Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Pastikan src/services/api.ts menggunakan URL backend yang benar:
 
-### Making a Progressive Web App
+```bash
+const API_BASE_URL = "http://localhost:8080/api/parking";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
